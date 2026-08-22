@@ -28,3 +28,40 @@
 - `chmod +x file` se execute permission milti hai
 - Numeric tareeqa: r=4, w=2, x=1 — jaise `chmod 755` = owner full access, group/others read+execute
 - Scripts/automation ke liye ye bohat zaroori hai real DevOps kaam mein
+
+## Process Management
+- Har chalta hua program ek **process** hai, jiska unique **PID** (Process ID) hota hai
+- `ps` sirf current session ki processes dikhata hai, `ps aux` **sab** system processes
+- `top` live view deta hai (CPU/memory usage), `q` se exit hota hai
+- `command &` se koi command background mein chalti hai
+- `kill <PID>` se us PID wali process band ho jati hai
+- `ps aux | grep <name>` se kisi specific process ko naam se dhoond sakte hain
+- Server pe hangi/crashed processes dhoond ke restart karne ke liye ye commands zaroori hain
+
+## Package Managers
+- Software install karne ka command-line tareeqa, servers pe GUI nahi hoti isliye zaroori hai
+- Mac → `brew` (Homebrew), Ubuntu/Debian → `apt`, RedHat/CentOS → `yum`/`dnf`
+- Concept sab jagah same: search, install, uninstall, list
+- `brew install <name>` se install, `brew uninstall <name>` se remove
+- Cloud servers (AWS Ubuntu, etc.) pe yehi kaam `apt` se hoga
+
+## Users & Groups
+- Linux multi-user system hai, har user ka apna UID aur groups hote hain
+- `id` se UID, primary group, aur sab groups dikhte hain; `groups` sirf groups
+- **root** sabse powerful user hota hai — direct root se kaam karna risky hai (security best practice nahi)
+- `sudo <command>` se koi normal user temporarily root powers le sakta hai ek command ke liye
+- Real servers pe: har team member ka apna normal user hota hai, zaroorat pe `sudo` use karte hain, direct root login nahi karte
+
+## SSH (Secure Shell)
+- Remote server ko terminal se control karne ka secure tareeqa
+- Key pair: **private key** (secret, apne paas rakhte hain) + **public key** (server/GitHub ko dete hain)
+- `ssh-keygen -t ed25519 -C "label"` se naya key pair banta hai
+- AWS server access, deployment pipelines, aur GitHub SSH push — sab isi concept pe based hain
+- Passwords ke bajaye keys zyada secure hoti hain login ke liye
+
+## Cron Jobs (Scheduled Tasks)
+- Cron ek scheduler hai jo fixed time pe automatically command/script chalata hai
+- `crontab -e` se edit karte hain, `crontab -l` se list dekhte hain, `crontab -r` se sab remove
+- Format: `minute hour date month weekday command` — `*` ka matlab "har" (every)
+- Real use: automated backups, log cleanup, scheduled reports
+- Editor `vim` ho to: `i` = insert mode, `Esc` = normal mode, `:wq` = save+quit, `dd` = line delete

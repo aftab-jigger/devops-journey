@@ -13,3 +13,9 @@
 | `-gt` `-lt` `-eq` `-ge` `-le` | Comparison operators: greater/less/equal/greater-eq/less-eq than |
 | `for i in ... do ... done` | Loop — kisi list/range pe repeat karta hai |
 | `for file in path/*.ext` | Kisi folder ki matching files pe loop karta hai |
+| `function_name() { ... }` | Function define karta hai (reusable code block) |
+| `$1`, `$2`, ... | Function/script ko diye gaye arguments (pehla, dusra, waghera) |
+| `ifconfig` | Network interfaces aur unke IP addresses dikhata hai |
+| `ipconfig getifaddr en0` | Sirf local WiFi IP address dikhata hai (shorter) |
+| `ping <host>` | Check karta hai koi server/website reachable hai ya nahi, latency ke sath |
+| `lsof -i -P \| grep LISTEN` | Kaunse ports pe kaunsi services currently listening hain, dikhata hai |

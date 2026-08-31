@@ -40,3 +40,9 @@
 - `ping <host>` se reachability check
 - `lsof -i -P | grep LISTEN` se active/listening services dekh sakte hain
 - Private IP sirf local network ke andar valid; public IP + open ports chahiye bahar se access ke liye
+
+## curl (HTTP Requests from Terminal)
+- `curl <url>` se koi bhi API/website ko request bhej sakte hain, bina browser ke
+- `curl -I <url>` sirf headers dikhata hai (fast health-check ke liye)
+- **HTTP Status Codes:** 200=OK, 301/302=Redirect, 404=Not Found, 500=Server Error
+- Real DevOps use: deployment ke baad server health check, API testing scripts mein automated checks

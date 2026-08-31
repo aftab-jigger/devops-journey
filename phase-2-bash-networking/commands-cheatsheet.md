@@ -19,3 +19,5 @@
 | `ipconfig getifaddr en0` | Sirf local WiFi IP address dikhata hai (shorter) |
 | `ping <host>` | Check karta hai koi server/website reachable hai ya nahi, latency ke sath |
 | `lsof -i -P \| grep LISTEN` | Kaunse ports pe kaunsi services currently listening hain, dikhata hai |
+| `curl <url>` | Terminal se HTTP request bhejta hai, response dikhata hai |
+| `curl -I <url>` | Sirf response headers dikhata hai (status code check ke liye fast) |

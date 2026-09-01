@@ -40,3 +40,13 @@
 - Syntax: `for i in range(a, b):` — a se (b-1) tak chalta hai, **end number exclude hota hai** (important gotcha)
 - `import os` se modules import karte hain (JS ke require/import jaisa concept)
 - `os.listdir(".")` se current folder ki files list hoti hain (Bash ke `for file in *.ext` jaisa)
+
+## Functions in Python
+- `def function_name(param):` se define hota hai — JS ke function jaisa hi
+- Parameters naam se hote hain (Bash ke $1, $2 jaisa nahi)
+- `return value` se function value wapas bhejta hai, jise variable mein store kar sakte hain
+
+## Real Automation Script: Backup Report
+- Banaya ek script jo folder ki sab files ka naam + size report karta hai
+- `os.path.expanduser()`, `os.path.join()`, `os.path.isfile()`, `os.path.getsize()` combine karke real file-system automation
+- Ye pattern real DevOps mein storage audits, backup verification jaisi cheezon mein use hota hai

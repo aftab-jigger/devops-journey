@@ -20,3 +20,9 @@
 | `for i in range(a, b):` | Loop, a se (b-1) tak — end number exclude hota hai |
 | `import <module>` | Extra functionality add karta hai (jaise JS ka import/require) |
 | `os.listdir(".")` | Current folder ki files/folders list karta hai |
+| `def function_name(param):` | Function define karta hai, colon + indentation ke sath |
+| `return value` | Function se value wapas bhejta hai |
+| `os.path.expanduser("~/path")` | `~` ko poore absolute path mein convert karta hai |
+| `os.path.join(a, b)` | Do paths ko safely combine karta hai |
+| `os.path.isfile(path)` | Check karta hai ye file hai ya folder |
+| `os.path.getsize(path)` | File ka size (bytes mein) deta hai |
